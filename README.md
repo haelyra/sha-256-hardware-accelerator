@@ -1,5 +1,6 @@
 # SHA-256-Hardware-Accelerator
-This is a hardware SHA-256 hashing core in SystemVerilog as a part of a Bitcoin style block hashing pipeline. Includes message scheduling, compression rounds, and control logic. Verified correctness using known test vectors and simulation, with a focus on clean RTL structure and predictable timing behavior.
+This is a hardware SHA-256 hashing core in SystemVerilog as a part of a Bitcoin style block hashing pipeline. Includes message scheduling, compression rounds, and control logic. Verified correctness using known test vectors and simulation, with a focus on clean RTL structure and predictable timing behavior. 
+I’ve included the full RTL and testbench + transcripts so anyone can reproduce the results by running the project in Intel Quartus (or a similar SystemVerilog simulator).
 
 SHA-256 is a cryptographic hash function that takes an input message (up to 2^64 - 1 bits in the spec) and compresses it into a fixed 256 bit output (the digest). A tiny change in the input produces a completely different output, and the process is designed to be infeasible to reverse. Internally, the message is padded and processed in 512-bit blocks, running 64 rounds per block using rotates, XORs, ANDs, and modular additions with a fixed table of constants, while chaining a running hash state (h0–h7) across blocks.
 
