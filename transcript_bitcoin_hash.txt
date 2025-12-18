@@ -1,0 +1,67 @@
+# Compile of bitcoin_hash.sv was successful.
+# Compile of tb_simplified_sha256_20w.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of bitcoin_hash.sv was successful.
+# Compile of  testbench_bitcoin_hash.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work. testbench_bitcoin_hash
+# vsim -gui work. testbench_bitcoin_hash 
+# Start time: 01:35:42 on Dec 13,2025
+# Loading sv_std.std
+# Loading work. testbench_bitcoin_hash
+# Loading work.bitcoin_hash
+add wave -position insertpoint  \
+sim:/ testbench_bitcoin_hash/clk
+run -all
+# Header, 19 words:
+# 01234567
+# 02468ace
+# 048d159c
+# 091a2b38
+# 12345670
+# 2468ace0
+# 48d159c0
+# 91a2b380
+# 23456701
+# 468ace02
+# 8d159c04
+# 1a2b3809
+# 34567012
+# 68ace024
+# d159c048
+# a2b38091
+# 45670123
+# 8ace0246
+# 159c048d
+# __________________________
+# 
+# Hash result comparison:
+# Correct H0[ 0] = 7106973a	Output H0[ 0] = 7106973a
+# Correct H0[ 1] = 6e66eea7	Output H0[ 1] = 6e66eea7
+# Correct H0[ 2] = fbef64dc	Output H0[ 2] = fbef64dc
+# Correct H0[ 3] = 0888a18c	Output H0[ 3] = 0888a18c
+# Correct H0[ 4] = 9642d5aa	Output H0[ 4] = 9642d5aa
+# Correct H0[ 5] = 2ab6af8b	Output H0[ 5] = 2ab6af8b
+# Correct H0[ 6] = 24259d8c	Output H0[ 6] = 24259d8c
+# Correct H0[ 7] = ffb9bcd9	Output H0[ 7] = ffb9bcd9
+# Correct H0[ 8] = 642138c9	Output H0[ 8] = 642138c9
+# Correct H0[ 9] = 054cafc7	Output H0[ 9] = 054cafc7
+# Correct H0[10] = 78251a17	Output H0[10] = 78251a17
+# Correct H0[11] = af8c8f22	Output H0[11] = af8c8f22
+# Correct H0[12] = d7a79ef8	Output H0[12] = d7a79ef8
+# Correct H0[13] = c7d10c84	Output H0[13] = c7d10c84
+# Correct H0[14] = 9537acfd	Output H0[14] = 9537acfd
+# Correct H0[15] = c1e4c72b	Output H0[15] = c1e4c72b
+# __________________________
+# 
+# Hash results as expected
+# 
+# Number of cycles:        2302
+# 
+# 
+# __________________________
+# 
+# ** Note: $stop    : C:/Users/gisme/Desktop/Part2/bitcoin_hash/ testbench_bitcoin_hash.sv(334)
+#    Time: 46090 ps  Iteration: 4  Instance: / testbench_bitcoin_hash
+# Break in Module  testbench_bitcoin_hash at C:/Users/gisme/Desktop/Part2/bitcoin_hash/ testbench_bitcoin_hash.sv line 334

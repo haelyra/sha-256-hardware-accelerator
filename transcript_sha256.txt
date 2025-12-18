@@ -1,0 +1,63 @@
+# Compile of simplified_sha256.sv was successful.
+# Compile of  testbench_sha256_20w.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work. testbench_sha256
+# vsim -gui work. testbench_sha256 
+# Start time: 19:17:55 on Dec 13,2025
+# Loading sv_std.std
+# Loading work. testbench_sha256
+# Loading work.simplified_sha256
+add wave -position insertpoint  \
+sim:/ testbench_sha256/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gisme  Hostname: DESKTOP-Q4LH24G  ProcessID: 11312
+#           Attempting to use alternate WLF file "./wlftzkqz8h".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzkqz8h
+run -all
+# Messages:
+# 01234675
+# 02468cea
+# 048d19d4
+# 091a33a8
+# 12346750
+# 2468cea0
+# 48d19d40
+# 91a33a80
+# 23467501
+# 468cea02
+# 8d19d404
+# 1a33a809
+# 34675012
+# 68cea024
+# d19d4048
+# a33a8091
+# 46750123
+# 8cea0246
+# 19d4048d
+# 33a8091a
+# __________________________
+# 
+# Hash results:
+# Correct H[0] = 5b8feb0a	Output H[0] = 5b8feb0a
+# Correct H[1] = d258a227	Output H[1] = d258a227
+# Correct H[2] = 116df790	Output H[2] = 116df790
+# Correct H[3] = 66c9d8cc	Output H[3] = 66c9d8cc
+# Correct H[4] = 47e75276	Output H[4] = 47e75276
+# Correct H[5] = a5316e2f	Output H[5] = a5316e2f
+# Correct H[6] = d1965a81	Output H[6] = d1965a81
+# Correct H[7] = 5904edff	Output H[7] = 5904edff
+# __________________________
+# 
+# Results as expected
+# 
+# Number of cycles:         259
+# 
+# 
+# __________________________
+# 
+# ** Note: $stop    : C:/Users/gisme/Desktop/Part2/simplified_sha256/ testbench_sha256_20w.sv(231)
+#    Time: 5230 ps  Iteration: 4  Instance: / testbench_sha256
+# Break in Module  testbench_sha256 at C:/Users/gisme/Desktop/Part2/simplified_sha256/ testbench_sha256_20w.sv line 231
+# End time: 19:18:58 on Dec 13,2025, Elapsed time: 0:01:03
+# Errors: 0, Warnings: 8
